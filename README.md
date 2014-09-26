@@ -1,12 +1,16 @@
 # Genimon
 
+## Demonstration
+
+http://demo.genimon.com.br
+
 ## Requirements
 
 NodeJS and MongoDB
 
 ## Installation
 
-mongoimport -d genimon <installdir>/dump/genimon
+mongoimport -d genimon installdir/dump/genimon
 
 npm install
 
