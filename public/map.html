@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Genimon</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Galindo' rel='stylesheet' type='text/css'>
+        <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="content">
+            <div id="board"></div>
+        </div> 
+
+        <div>
+            <div id="controls">
+                <button class="action-menu" title="home"><i class="icon-reorder"></i></button>
+                <button class="action-pallete" data-tag="0" title="color 1">1</button>
+                <button class="action-pallete" data-tag="1" title="color 2">2</button>
+                <button class="action-pallete" data-tag="2" title="color 3">3</button>
+                <button class="action-pallete" data-tag="3" title="color 4">4</button>
+                <button class="action-pallete" data-tag="4" title="color 5">5</button>
+                <button class="action-pallete" data-tag="5" title="color 6">6</button>
+                <button id="zoom_in" title="Zoom In">+</button>
+                <button id="zoom_out" title="Zoom Out">-</button>
+                <button class="action-upload" title="Save"><i class="icon-cloud-upload"></i></button>
+            </div>
+        </div>
+
+        <script src="javascripts/vendor/jquery-2.1.1.min.js"></script>
+        <script src="javascripts/plugins.js"></script>
+        <script src="javascripts/vendor/kinetic-v5.1.0.min.js"></script>
+        <script src="javascripts/map.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-39007663-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

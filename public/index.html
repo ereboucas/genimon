@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Genimon</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+        <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+        <link rel="stylesheet" href="stylesheets/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Galindo' rel='stylesheet' type='text/css'>
+        <script src="javascripts/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="content">
+
+            <div id="welcome">
+
+                <img src="images/logo.png">
+
+                <div>
+                    <div id="avatar_selector">
+
+                        <h2>Escolha seu perfil</h2>
+
+                        <div class="avatar" data-role="player">
+                            <img src="images/player.png">
+                            <p>Jogador</p>
+                        </div>
+
+                        <div class="avatar" data-role="coach">
+                            <img src="images/coach.png">
+                            <p>Treinador</p>
+                        </div>
+
+                        <div class="avatar" data-role="engineer">
+                            <img src="images/engineer.png">
+                            <p>Criador</p>
+                        </div>
+
+                    </div>
+
+                    <div id="map_selector">
+                        <h2>Escolha seu mapa</h2>
+
+                        <div class="map" data-map="segredos_do_universo">
+                            <img src="maps/segredos_do_universo/logo.png">
+                            <p>Segredos do Universo</p>
+                        </div>
+
+                        <div class="map" data-map="historias_e_lendas">
+                            <img src="maps/historias_e_lendas/logo.png">
+                            <p>Histórias e Lendas</p>
+                        </div>
+
+                        <div class="map" data-map="mestre_das_palavras">
+                            <img src="maps/mestre_das_palavras/logo.png">
+                            <p>Mestre das Palavras</p>
+                        </div>
+
+                        <div class="map" data-map="nosso_planeta">
+                            <img src="maps/nosso_planeta/logo.png">
+                            <p>Nosso planeta</p>
+                        </div>
+
+                        <div class="map" data-map="numeros_meus_amigos">
+                            <img src="maps/numeros_meus_amigos/logo.png">
+                            <p>Números meus amigos</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="controls">
+            <button id="start"><i class="icon-play"></i></button>
+        </div>
+
+        <script src="javascripts/vendor/jquery-2.1.1.min.js"></script>
+        <script src="javascripts/plugins.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-39007663-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+        <script>
+
+            var role = localStorage.getItem('role');
+            var map = localStorage.getItem('map');
+
+            $(document).ready(function() {
+
+                $('.avatar').click(function() {
+                    if (role != 'none')
+                        $('div[data-role=' + role + ']').css('background-color', $("#welcome").css('background-color'));
+                    $(this).css('background-color', '#2aff80');
+                    role = $(this).data('role');
+                });
+
+                $('.map').click(function() {
+                    if (map != 'none')
+                        $('div[data-map=' + map + ']').css('background-color', $("#welcome").css('background-color'));
+                    $(this).css('background-color', '#2aff80');
+                    map = $(this).data('map');
+                });
+
+                $('#start').click(function() {
+                    localStorage.setItem('role', role);
+                    localStorage.setItem('map', map);
+                    window.location.href = "map.html";
+                });
+
+                $('div[data-role=' + role + ']').css('background-color', '#2aff80');
+                $('div[data-map=' + map + ']').css('background-color', '#2aff80');
+
+            });
+
+        </script>
+    </body>
+</html>
